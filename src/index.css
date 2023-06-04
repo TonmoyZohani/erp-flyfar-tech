@@ -1,13 +1,197 @@
-body {
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--body-background-color) !important;
+  min-height: 100vh;
+  overscroll-behavior-y: none;
+  font-family: 'Poppins', sans-serif!important;
 }
+
+:root {
+  --primary-rgb: rgb(220, 20, 60, 0.4);
+  --input-field: #9C9797;
+  --primary-color: #003566;
+    --light-blue: #b6d2ec;
+  --green-color:#089326;
+    --lightgreen-color:#16b93a;
+  --card-color:#29292B;
+  --primary-rgb: rgb(220, 20, 60, 0.4);
+  --secondary-color: #FCAF17;
+  --tertiary-color:#8B5A0F;
+--footer-color:#666676;
+--underline:#4F76AE;
+  --list-color: #ECF9FF;
+  --light-bg: #C7C7C7;
+  --secondary-gradient: linear-gradient(121.52deg, #5d7f9e 0%, #003566 77.49%);
+  --secondary-rgb: 37, 100, 184;
+  --third-rgb: 34, 34, 34;
+  --para-text: #D9D9D9;
+  --white: #ffffff;
+  --input-bg: #F4F4F4;
+  --grey-color: #525371,
+  --white-rgb: 255, 255, 255;
+  --black: #000000;
+  --sub-title: #9C9797;
+  --table-id: "#D3E0F0",
+  --green: #0e8749;
+  --card: #888888;
+  --card-secondary: #003E6B;
+  --galileo: #ffffff;
+  --flyhub: #4169e1;
+  --mateblack: #222222;
+  --tomato-color: #ED1C24;
+  --gradient1: linear-gradient(121.52deg, #000428 0%, #004e92 77.49%);
+  --gradient2: linear-gradient(121.52deg, #dc143c 0%, #f45c43 77.49%);
+  --bgcolor: #ebf0f4;
+  --bordercolor: #d9d9d9;
+  --button-color: #2C74B3,
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.li-style {
+  padding: 8px 20px;
+  color: var(--primary-color);
+  background-color: var(--white);
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.li-style-active {
+  padding: 8px 20px;
+  color: var(--white);
+  background-color: var(--primary-color);
+   border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+  .customFileType::-webkit-file-upload-button {
+    background: red;
+    border: none;
+    color: #ff6464;
+    text-align: center;
+    display: none;
+  }
+
+  .customPlaceholderColor::placeholder {
+      color: var(--primary-color);
+    }
+
+   .balance-transaction {
+  width: 100%;
+}
+
+.balance-transaction table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 5px;
+  text-align: start;
+}
+
+.balance-transaction table th {
+  background-color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px 5px;
+  color: #fff !important;
+  text-align: start;
+  vertical-align: top;
+}
+
+.balance-transaction table td {
+  padding: 10px 4px;
+  background: #ffffff;
+  color: black;
+  font-size: 11.5px;
+  text-align: start;
+  vertical-align: top;
+}
+
+.balance-transaction table td a {
+  color: var(--black);
+  font-size: 13px;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.balance-transaction table tr:hover {
+  background-color: #e0ecfb !important;
+}
+
+  .customFileType::-webkit-file-upload-button {
+    background: #ff6464 !important;
+    border: none;
+    color: #ff6464;
+    text-align: center;
+    display: none;
+  }
+
+
+
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+    .balance-transaction
+    table { 
+        width: 100%; 
+    }
+  
+    /* Force table to not be like tables anymore */
+    .balance-transaction table, .balance-transaction thead, .balance-transaction tbody, .balance-transaction th, .balance-transaction td, .balance-transaction tr { 
+      display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .balance-transaction thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    .balance-transaction tr { border: 1px solid #ccc; }
+    
+    .balance-transaction tbody tr td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      
+      padding-left: 50%; 
+     
+    }
+  
+    .balance-transaction td:before { 
+    
+      position: absolute;
+    
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 20px; 
+      white-space: nowrap;
+      
+      content: attr(data-column);
+  
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+  
+  }
